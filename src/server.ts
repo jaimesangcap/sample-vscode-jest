@@ -5,12 +5,13 @@ import * as Router from 'koa-router'
 const app = new Koa()
 const router = new Router()
 
-router.get('/tasks', async (ctx, next) => {
+router.get('/staffs', async (ctx, next) => {
   ctx.body = 'Hello World!'
 })
 
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-export default app.listen(3001, () => console.log('Listening on port 3001...'))
+const server = app
 
+export default server

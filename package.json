@@ -8,7 +8,7 @@
   "scripts": {
     "start": "npm run build && npm run watch",
     "build": "npm run build-ts && npm run tslint",
-    "test": "jest",
+    "test": "jest --watch",
     "watch": "concurrently -k -p \"[{name}]\" -n \"Typescript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve\"",
     "serve": "nodemon dist/server.js",
     "build-ts": "tsc",
@@ -21,16 +21,16 @@
     "koa-router": "^7.2.1"
   },
   "devDependencies": {
-    "@types/jest": "^21.0.1",
+    "@types/jest": "^21.1.4",
     "@types/koa": "^2.0.39",
     "@types/koa-bodyparser": "^3.0.25",
     "@types/koa-router": "^7.0.23",
     "@types/supertest": "^2.0.3",
     "concurrently": "^3.5.0",
-    "jest-cli": "^21.0.1",
-    "mocha": "^4.0.1",
+    "jest-cli": "^21.2.1",
     "nodemon": "^1.12.1",
     "supertest": "^3.0.0",
+    "supertest-koa-agent": "^0.3.0",
     "ts-jest": "^21.1.3",
     "tslint": "^5.7.0",
     "typescript": "^2.5.3"
@@ -39,7 +39,7 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",

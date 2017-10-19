@@ -1,0 +1,22 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "indent": [true, "spaces"],
+    "quotemark": [true, "single"],
+    "semicolon": [false, "always"],
+    "trailing-comma": [false],
+    "no-var-keyword": true,
+    "no-console": [false],
+    "object-literal-sort-keys": [false],
+    "curly": false,
+    "only-arrow-functions": false,
+    "arrow-parens": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive"
+      }
+    ]
+  }
+}
